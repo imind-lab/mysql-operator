@@ -1,0 +1,14 @@
+apiVersion: db.imind.tech/v1beta1
+kind: MySQLCluster
+metadata:
+  labels:
+    app.kubernetes.io/name: mysqlcluster
+    app.kubernetes.io/instance: mysqlcluster-sample
+    app.kubernetes.io/part-of: mysql-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: mysql-operator
+  name: mysqlcluster-sample
+spec:
+  # TODO(user): Add fields here
+  image: mysql:5.7
+  size: 4

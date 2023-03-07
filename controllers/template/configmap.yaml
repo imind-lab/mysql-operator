@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.ObjectMeta.Name}}
+  namespace: {{.ObjectMeta.Namespace}}
+data:
+  primary.cnf: |
+    # the configuration for master node
+    [mysqld]
+    log-bin
+  replica.cnf: |
+    # the configuration for slave node
+    [mysqld]
+    super-read-only
